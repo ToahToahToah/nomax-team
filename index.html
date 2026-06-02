@@ -1,10 +1,9 @@
-html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOMAX Esports | Official Website</title>
+    <title>NOMAX Esports | Official Store & Socials</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -14,105 +13,151 @@ html
             background-color: #050505;
             color: #ffffff;
             font-family: 'Inter', sans-serif;
-            background-image: radial-gradient(circle at 50% -20%, #3b82f633 0%, rgba(0,0,0,0) 50%);
+            scroll-behavior: smooth;
         }
 
-        .heading-font {
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 0.1em;
-        }
+        .heading-font { font-family: 'Orbitron', sans-serif; letter-spacing: 0.1em; }
 
-        .glass-card {
+        .glass {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
         }
 
-        .glass-card:hover {
-            border: 1px solid #3b82f6;
-            background: rgba(59, 130, 246, 0.05);
-            transform: translateY(-5px);
+        .neon-border:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
         }
 
-        .social-icon {
-            font-size: 1.5rem;
-            transition: transform 0.2s;
+        .product-card img {
+            transition: transform 0.5s ease;
         }
 
-        .glow-text {
-            text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        .product-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .nav-link:hover {
+            color: #3b82f6;
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center p-6">
+<body class="bg-black">
 
-    <!-- Header / Logo Section -->
-    <header class="text-center mb-12">
-        <div class="inline-block p-4 mb-4 border-b-4 border-blue-600">
-            <h1 class="heading-font text-5xl md:text-7xl font-black glow-text">NOMAX</h1>
-            <p class="heading-font text-blue-500 text-sm tracking-[0.5em] mt-2">ESPORTS</p>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass py-4">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <div class="heading-font font-bold text-xl tracking-tighter">
+                NOMAX<span class="text-blue-600">.</span>
+            </div>
+            <div class="space-x-8 heading-font text-xs uppercase tracking-widest">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#socials" class="nav-link">Follow</a>
+                <a href="#store" class="nav-link text-blue-500">Store</a>
+            </div>
         </div>
-        <p class="text-gray-400 mt-4 max-w-md mx-auto">Pushing the limits of competitive gaming. Join the revolution.</p>
-    </header>
+    </nav>
 
-    <!-- Social Links Grid -->
-    <main class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl">
-        
-        <!-- X (Twitter) -->
-        <a href="https://x.com/NomaxEsports" target="_blank" class="glass-card p-6 rounded-2xl flex items-center space-x-4">
-            <div class="bg-white/10 p-3 rounded-xl">
-                <i class="fa-brands fa-x-twitter text-2xl"></i>
-            </div>
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6 text-center bg-[radial-gradient(circle_at_50%_40%,#1e3a8a_0%,transparent_50%)]">
+        <h1 class="heading-font text-6xl md:text-8xl font-black mb-4">NOMAX</h1>
+        <p class="heading-font text-blue-400 tracking-[0.8em] text-sm md:text-xl mb-8">PRO ESPORTS TEAM</p>
+        <div class="flex justify-center gap-4">
+            <a href="#store" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full font-bold transition">SHOP MERCH</a>
+            <a href="#socials" class="border border-white/20 hover:bg-white/10 px-8 py-3 rounded-full font-bold transition">COMMUNITY</a>
+        </div>
+    </section>
+
+    <!-- Social Links Section -->
+    <section id="socials" class="max-w-4xl mx-auto py-20 px-6">
+        <h2 class="heading-font text-2xl text-center mb-10">CONNECT WITH US</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a href="https://x.com/NomaxEsports" target="_blank" class="glass p-6 rounded-2xl flex flex-col items-center neon-border transition">
+                <i class="fa-brands fa-x-twitter text-3xl mb-2"></i>
+                <span class="text-xs font-bold uppercase">Twitter</span>
+            </a>
+            <a href="https://www.twitch.tv/nomaxesports" target="_blank" class="glass p-6 rounded-2xl flex flex-col items-center neon-border transition">
+                <i class="fa-brands fa-twitch text-3xl mb-2 text-purple-500"></i>
+                <span class="text-xs font-bold uppercase">Twitch</span>
+            </a>
+            <a href="https://www.youtube.com/@NomaxEsports" target="_blank" class="glass p-6 rounded-2xl flex flex-col items-center neon-border transition">
+                <i class="fa-brands fa-youtube text-3xl mb-2 text-red-500"></i>
+                <span class="text-xs font-bold uppercase">YouTube</span>
+            </a>
+            <a href="https://www.tiktok.com/@nomaxesports" target="_blank" class="glass p-6 rounded-2xl flex flex-col items-center neon-border transition">
+                <i class="fa-brands fa-tiktok text-3xl mb-2 text-cyan-400"></i>
+                <span class="text-xs font-bold uppercase">TikTok</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Store Section -->
+    <section id="store" class="max-w-6xl mx-auto py-20 px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
             <div>
-                <h3 class="font-bold">Twitter / X</h3>
-                <p class="text-xs text-gray-500">Stay updated with our news</p>
+                <h2 class="heading-font text-4xl font-bold">THE ARMORY</h2>
+                <p class="text-gray-400 uppercase tracking-widest text-sm">Official Team Apparel</p>
             </div>
-        </a>
+            <p class="text-blue-500 font-bold hidden md:block">LIMITLESS PERFORMANCE —</p>
+        </div>
 
-        <!-- Twitch -->
-        <a href="https://www.twitch.tv/nomaxesports" target="_blank" class="glass-card p-6 rounded-2xl flex items-center space-x-4">
-            <div class="bg-[#9146FF]/20 p-3 rounded-xl text-[#9146FF]">
-                <i class="fa-brands fa-twitch text-2xl"></i>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Product 1 -->
+            <div class="product-card glass rounded-3xl overflow-hidden group">
+                <div class="h-80 bg-zinc-900 relative overflow-hidden flex items-center justify-center">
+                    <i class="fa-solid fa-shirt text-6xl text-zinc-800 absolute transition group-hover:scale-150"></i>
+                    <!-- Replace with actual product image URL -->
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=500" alt="Jersey" class="h-full w-full object-cover">
+                    <div class="absolute top-4 left-4 bg-blue-600 px-3 py-1 text-[10px] font-bold rounded">PRE-ORDER</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="heading-font font-bold">2024 PRO JERSEY</h3>
+                    <p class="text-gray-400 text-sm mt-1">Lightweight performance fabric.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-blue-500">$65.00</span>
+                        <button class="bg-white text-black px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-500 hover:text-white transition">ADD TO CART</button>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3 class="font-bold">Twitch</h3>
-                <p class="text-xs text-gray-500">Watch our live matches</p>
-            </div>
-        </a>
 
-        <!-- YouTube -->
-        <a href="https://www.youtube.com/@NomaxEsports" target="_blank" class="glass-card p-6 rounded-2xl flex items-center space-x-4">
-            <div class="bg-red-600/20 p-3 rounded-xl text-red-500">
-                <i class="fa-brands fa-youtube text-2xl"></i>
+            <!-- Product 2 -->
+            <div class="product-card glass rounded-3xl overflow-hidden group">
+                <div class="h-80 bg-zinc-900 relative overflow-hidden flex items-center justify-center">
+                    <i class="fa-solid fa-headset text-6xl text-zinc-800 absolute transition group-hover:scale-150"></i>
+                    <img src="https://images.unsplash.com/photo-1556190502-c179a57262fd?auto=format&fit=crop&q=80&w=500" alt="Hoodie" class="h-full w-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="heading-font font-bold">NOMAX HOODIE</h3>
+                    <p class="text-gray-400 text-sm mt-1">Limited edition "Stealth" black.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-blue-500">$45.00</span>
+                        <button class="bg-white text-black px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-500 hover:text-white transition">ADD TO CART</button>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3 class="font-bold">YouTube</h3>
-                <p class="text-xs text-gray-500">Watch highlights & VODs</p>
-            </div>
-        </a>
 
-        <!-- TikTok -->
-        <a href="https://www.tiktok.com/@nomaxesports" target="_blank" class="glass-card p-6 rounded-2xl flex items-center space-x-4">
-            <div class="bg-cyan-500/20 p-3 rounded-xl text-cyan-400">
-                <i class="fa-brands fa-tiktok text-2xl"></i>
+            <!-- Product 3 -->
+            <div class="product-card glass rounded-3xl overflow-hidden group">
+                <div class="h-80 bg-zinc-900 relative overflow-hidden flex items-center justify-center">
+                    <i class="fa-solid fa-rug text-6xl text-zinc-800 absolute transition group-hover:scale-150"></i>
+                    <img src="https://images.unsplash.com/photo-1616423641454-996964176461?auto=format&fit=crop&q=80&w=500" alt="Mousepad" class="h-full w-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="heading-font font-bold">GAMING MOUSEPAD</h3>
+                    <p class="text-gray-400 text-sm mt-1">Precision control surface.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-xl font-bold text-blue-500">$25.00</span>
+                        <button class="bg-white text-black px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-500 hover:text-white transition">ADD TO CART</button>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3 class="font-bold">TikTok</h3>
-                <p class="text-xs text-gray-500">Short clips & funny moments</p>
-            </div>
-        </a>
-
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="mt-20 text-center">
+    <footer class="mt-20 py-10 border-t border-white/5 text-center">
         <p class="text-gray-600 text-xs heading-font uppercase">© 2024 NOMAX Esports. All Rights Reserved.</p>
-        <div class="mt-4 flex justify-center space-x-2">
-            <span class="h-1 w-8 bg-blue-600 rounded-full"></span>
-            <span class="h-1 w-2 bg-blue-800 rounded-full"></span>
-            <span class="h-1 w-1 bg-blue-900 rounded-full"></span>
-        </div>
     </footer>
 
 </body>
