@@ -58,3 +58,128 @@ html
 
 </body>
 </html>
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOMAX | OFFICIAL SITE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;900&display=swap');
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-font { font-family: 'Syncopate', sans-serif; }
+        .gradient-text { background: linear-gradient(to right, #ffffff, #444444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card { background: #0a0a0a; border: 1px solid #1a1a1a; transition: 0.3s; position: relative; overflow: hidden; }
+        .card:hover { border-color: #fff; box-shadow: 0 0 20px rgba(255,255,255,0.05); }
+        .owner-tag { background: #fff; color: #000; font-size: 10px; font-weight: 900; padding: 2px 8px; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/5 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="hero-font text-xl tracking-tighter italic">NOMAX</div>
+            <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-[0.2em]">
+                <a href="#org" class="hover:text-gray-400">Organization</a>
+                <a href="#store" class="hover:text-gray-400">Store</a>
+                <a href="#os" class="hover:text-gray-400">OS</a>
+                <a href="YOUR_DISCORD_LINK" class="border border-white px-4 py-2 hover:bg-white hover:text-black transition">Join Squad</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="h-[80vh] flex flex-col justify-center items-center text-center px-4">
+        <h1 class="hero-font text-7xl md:text-9xl mb-4 italic tracking-tighter gradient-text">NOMAX</h1>
+        <p class="text-gray-600 uppercase tracking-[1.2em] text-[10px] mb-8">Established for the Bold</p>
+    </section>
+
+    <!-- Organization / Ownership Section -->
+    <section id="org" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="mb-12">
+            <h2 class="hero-font text-3xl italic tracking-tighter">OWNERSHIP</h2>
+            <div class="h-1 w-20 bg-white mt-2"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+            <!-- Owner 1 -->
+            <div class="card p-10">
+                <span class="owner-tag uppercase">Founder / Owner</span>
+                <h3 class="text-3xl font-black italic mt-4 uppercase tracking-tighter">TOAH</h3>
+                <p class="text-gray-500 text-xs mt-2 uppercase tracking-widest italic">Strategic Operations</p>
+            </div>
+            <!-- Owner 2 -->
+            <div class="card p-10">
+                <span class="owner-tag uppercase">Owner</span>
+                <h3 class="text-3xl font-black italic mt-4 uppercase tracking-tighter">BABU</h3>
+                <p class="text-gray-500 text-xs mt-2 uppercase tracking-widest italic">Community Director</p>
+            </div>
+            <!-- Owner 3 -->
+            <div class="card p-10">
+                <span class="owner-tag uppercase">Owner</span>
+                <h3 class="text-3xl font-black italic mt-4 uppercase tracking-tighter">TOMAN</h3>
+                <p class="text-gray-500 text-xs mt-2 uppercase tracking-widest italic">Technical Lead</p>
+            </div>
+        </div>
+
+        <!-- Players Subsection -->
+        <div class="mb-12">
+            <h2 class="hero-font text-xl italic tracking-tighter text-gray-400 uppercase">Active Players</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <!-- Add Player Card Start -->
+            <div class="card p-6 border-dashed border-gray-800">
+                <h3 class="text-lg font-bold uppercase italic">[ PLAYER NAME ]</h3>
+                <p class="text-gray-600 text-[10px] uppercase">Roster Slot</p>
+            </div>
+            <!-- Add Player Card End -->
+             <!-- Repeat the above block for more players -->
+        </div>
+    </section>
+
+    <!-- 3D Store -->
+    <section id="store" class="py-24 bg-[#030303] px-6 border-y border-white/5">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="hero-font text-4xl italic gradient-text">THE CUSTOM SHOP</h2>
+            <p class="text-gray-600 text-xs mt-4 tracking-[0.5em] uppercase italic">Precision 3D Printed Engineering</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Store Item 1 -->
+            <div class="cardgroup overflow-hidden">
+                <div class="aspect-square bg-zinc-900/50 flex items-center justify-center border border-white/5">
+                    <span class="text-[10px] uppercase tracking-widest text-gray-700">Product Visual</span>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-lg font-black italic uppercase tracking-tighter">3D Gaming Mod</h4>
+                    <p class="text-gray-500 text-xs mt-2">Custom-built performance parts.</p>
+                    <div class="flex justify-between items-center mt-6">
+                        <span class="text-xl font-black italic">€24.99</span>
+                        <a href="YOUR_DISCORD_LINK" class="bg-white text-black text-[10px] font-black px-4 py-2 uppercase hover:invert transition">Order</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more items here -->
+        </div>
+    </section>
+
+    <!-- Nomax OS -->
+    <section id="os" class="py-32 px-6 text-center">
+        <div class="max-w-xl mx-auto">
+            <h2 class="hero-font text-2xl italic mb-6">NOMAX OS</h2>
+            <p class="text-gray-500 text-sm leading-relaxed mb-10">
+                Our proprietary digital infrastructure. Managing rosters, tracking supply chains for our 3D production, and automating team dynamics.
+            </p>
+            <a href="https://nomaxos.lovable.app" class="border-b-2 border-white pb-2 text-xs font-black uppercase tracking-widest hover:text-gray-400 transition">Enter Dashboard</a>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center border-t border-white/5">
+        <p class="text-[10px] text-gray-700 tracking-[1em] uppercase">Nomax Universe • Infinite Runway</p>
+    </footer>
+
+</body>
+</html>
