@@ -1,77 +1,117 @@
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOMAX TEAM</title>
+    <title>NOMAX Esports | Official Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap');
+
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #000000;
+            background-color: #050505;
             color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            background-image: radial-gradient(circle at 50% -20%, #3b82f633 0%, rgba(0,0,0,0) 50%);
         }
 
-        /* Smooth border glow transition */
-        .btn-glow {
+        .heading-font {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.1em;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
-        .btn-glow:hover {
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-            border-color: #ffffff;
+
+        .glass-card:hover {
+            border: 1px solid #3b82f6;
+            background: rgba(59, 130, 246, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            transition: transform 0.2s;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between items-center bg-black px-6">
+<body class="min-h-screen flex flex-col items-center justify-center p-6">
 
-    <header class="w-full max-w-5xl flex justify-between items-center py-6 mt-2">
-        <div class="text-xl font-bold tracking-tight select-none">
-            nomax<span class="text-neutral-500">.team</span>
+    <!-- Header / Logo Section -->
+    <header class="text-center mb-12">
+        <div class="inline-block p-4 mb-4 border-b-4 border-blue-600">
+            <h1 class="heading-font text-5xl md:text-7xl font-black glow-text">NOMAX</h1>
+            <p class="heading-font text-blue-500 text-sm tracking-[0.5em] mt-2">ESPORTS</p>
         </div>
-        
-        <div>
-            <a href="YOUR_DISCORD_LINK_HERE" class="btn-glow border border-neutral-800 bg-neutral-950/50 text-[11px] font-semibold tracking-wider uppercase px-4 py-2 rounded-lg text-neutral-300 hover:text-white">
-                Join Squad
-            </a>
-        </div>
+        <p class="text-gray-400 mt-4 max-w-md mx-auto">Pushing the limits of competitive gaming. Join the revolution.</p>
     </header>
 
-    <main class="flex flex-col items-center justify-center text-center max-w-xl mx-auto my-auto py-12">
-        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent mb-4 select-none">
-            NOMAX ESPORTS
-        </h1>
+    <!-- Social Links Grid -->
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl">
         
-        <p class="text-sm sm:text-base text-neutral-400 leading-relaxed max-w-md mb-10">
-            Welcome to the home of NOMAX. We are a competitive esports organization focused on talent development, community integration, and pure in-game performance.
-        </p>
+        <!-- X (Twitter) -->
+        <a href="https://x.com/NomaxEsports" target="_blank" class="glass-card p-6 rounded-2xl flex items-center space-x-4">
+            <div class="bg-white/10 p-3 rounded-xl">
+                <i class="fa-brands fa-x-twitter text-2xl"></i>
+            </div>
+            <div>
+                <h3 class="font-bold">Twitter / X</h3>
+                <p class="text-xs text-gray-500">Stay updated with our news</p>
+            </div>
+        </a>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-sm">
-            <a href="YOUR_DISCORD_LINK_HERE" class="btn-glow flex items-center justify-center gap-2 border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900 text-white font-medium text-sm py-3.5 px-6 rounded-xl">
-                <span>Community Discord</span>
-            </a>
-            
-            <a href="YOUR_TWITCH_LINK_HERE" class="btn-glow flex items-center justify-center gap-2 border border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900 text-white font-medium text-sm py-3.5 px-6 rounded-xl">
-                <span>Watch Livestreams</span>
-            </a>
-        </div>
+        <!-- Twitch -->
+        <a href="https://www.twitch.tv/nomaxesports" target="_blank" class="glass-card p-6 rounded-2xl flex items-center space-x-4">
+            <div class="bg-[#9146FF]/20 p-3 rounded-xl text-[#9146FF]">
+                <i class="fa-brands fa-twitch text-2xl"></i>
+            </div>
+            <div>
+                <h3 class="font-bold">Twitch</h3>
+                <p class="text-xs text-gray-500">Watch our live matches</p>
+            </div>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@NomaxEsports" target="_blank" class="glass-card p-6 rounded-2xl flex items-center space-x-4">
+            <div class="bg-red-600/20 p-3 rounded-xl text-red-500">
+                <i class="fa-brands fa-youtube text-2xl"></i>
+            </div>
+            <div>
+                <h3 class="font-bold">YouTube</h3>
+                <p class="text-xs text-gray-500">Watch highlights & VODs</p>
+            </div>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@nomaxesports" target="_blank" class="glass-card p-6 rounded-2xl flex items-center space-x-4">
+            <div class="bg-cyan-500/20 p-3 rounded-xl text-cyan-400">
+                <i class="fa-brands fa-tiktok text-2xl"></i>
+            </div>
+            <div>
+                <h3 class="font-bold">TikTok</h3>
+                <p class="text-xs text-gray-500">Short clips & funny moments</p>
+            </div>
+        </a>
+
     </main>
 
-    <footer class="w-full max-w-4xl border-t border-neutral-900/60 mt-auto py-8">
-        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-neutral-500 font-medium uppercase tracking-wider">
-            <div class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>Status: Active</span>
-            </div>
-            
-            <div>
-                <span>Region: EU Central</span>
-            </div>
-            
-            <div class="normal-case text-neutral-600">
-                &copy; 2026 nomax.team. All rights reserved.
-            </div>
+    <!-- Footer -->
+    <footer class="mt-20 text-center">
+        <p class="text-gray-600 text-xs heading-font uppercase">© 2024 NOMAX Esports. All Rights Reserved.</p>
+        <div class="mt-4 flex justify-center space-x-2">
+            <span class="h-1 w-8 bg-blue-600 rounded-full"></span>
+            <span class="h-1 w-2 bg-blue-800 rounded-full"></span>
+            <span class="h-1 w-1 bg-blue-900 rounded-full"></span>
         </div>
     </footer>
 
