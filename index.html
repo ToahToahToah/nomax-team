@@ -3,174 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOMAX | Official Site</title>
+    <title>NOMAX ESPORTS | Official Site</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;700&display=swap');
 
-        :root {
-            --primary: #3b82f6;
-            --bg-dark: #080808;
-        }
-
+        :root { --primary: #3b82f6; }
         body {
-            background-color: var(--bg-dark);
+            background-color: #050505;
             color: white;
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        .font-logo { font-family: 'Syncopate', sans-serif; letter-spacing: -0.05em; }
+        .font-logo { font-family: 'Syncopate', sans-serif; }
+        
+        /* Subtle Glow Animation */
+        @keyframes subtle-glow {
+            0% { text-shadow: 0 0 10px rgba(59, 130, 246, 0.2); }
+            50% { text-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+            100% { text-shadow: 0 0 10px rgba(59, 130, 246, 0.2); }
+        }
+        .logo-glow { animation: subtle-glow 3s infinite; }
 
-        /* Smooth scrolling for the whole page */
-        html { scroll-behavior: smooth; }
-
-        /* Bento Box Styling */
         .bento-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(12px);
-            border-radius: 24px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            overflow: hidden;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
         }
-
         .bento-item:hover {
             border-color: var(--primary);
-            background: rgba(59, 130, 246, 0.05);
-            transform: scale(1.02);
+            background: rgba(59, 130, 246, 0.03);
         }
 
-        /* Hero Video Mockup */
-        .hero-gradient {
-            background: linear-gradient(to bottom, rgba(8,8,8,0) 0%, rgba(8,8,8,1) 100%);
+        /* Modal styling for Privacy Policy */
+        #privacy-modal {
+            display: none;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(15px);
         }
-
-        /* Text outline effect like the original site */
-        .outline-text {
-            -webkit-text-stroke: 1px rgba(255,255,255,0.2);
-            color: transparent;
-        }
-
-        .no-scrollbar::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body class="no-scrollbar">
+<body class="overflow-x-hidden">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 px-6 py-8 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent">
-        <div class="font-logo text-2xl font-bold italic tracking-tighter">NOMAX</div>
-        <div class="hidden md:flex gap-10 text-[10px] font-bold uppercase tracking-[0.3em]">
-            <a href="#about" class="hover:text-blue-500 transition">About</a>
-            <a href="#socials" class="hover:text-blue-500 transition">Network</a>
-            <a href="#store" class="hover:text-blue-500 transition">Store</a>
+    <!-- Compact Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-white/5">
+        <div class="font-logo text-lg font-bold italic tracking-tighter logo-glow">NOMAX</div>
+        
+        <!-- Smaller Menu Links -->
+        <div class="flex items-center gap-6 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <a href="#socials" class="hover:text-blue-500 transition border-b border-transparent hover:border-blue-500 tracking-widest">Connect</a>
+            <a href="#store" class="hover:text-blue-500 transition border-b border-transparent hover:border-blue-500 tracking-widest">Shop</a>
         </div>
-        <a href="#store" class="bg-white text-black text-[10px] px-6 py-2 rounded-full font-bold uppercase tracking-widest hover:bg-blue-600 hover:text-white transition">Shop Now</a>
+
+        <!-- Very Small Action Buttons -->
+        <div class="flex items-center gap-3">
+            <a href="https://x.com/NomaxEsports" target="_blank" class="text-xs opacity-50 hover:opacity-100 transition"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.twitch.tv/nomaxesports" target="_blank" class="text-xs opacity-50 hover:opacity-100 transition"><i class="fa-brands fa-twitch"></i></a>
+            <a href="#store" class="bg-blue-600 px-3 py-1.5 rounded text-[9px] font-black uppercase tracking-tighter hover:bg-white hover:text-black transition">Store</a>
+        </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-        <!-- Hero Background (Image or Video) -->
-        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Background">
-        <div class="absolute inset-0 hero-gradient"></div>
+    <section class="h-[80vh] flex flex-col items-center justify-center relative px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,#1d4ed833_0%,transparent_70%)]"></div>
+        </div>
         
-        <div class="relative z-10 text-center px-4">
-            <h1 class="font-logo text-6xl md:text-9xl font-bold italic mb-4">NOMAX</h1>
-            <p class="text-blue-500 font-bold tracking-[1em] uppercase text-xs md:text-sm">Beyond Expectations</p>
-        </div>
+        <h1 class="font-logo text-7xl md:text-9xl font-bold italic z-10 text-center tracking-tighter">NOMAX</h1>
+        <p class="z-10 text-gray-500 font-medium tracking-[.8em] text-[10px] md:text-xs mt-2">DEFINING THE LIMIT</p>
+    </section>
 
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-            <i class="fa-solid fa-chevron-down opacity-30"></i>
+    <!-- Social Bento Grid (The "Connect" Section) -->
+    <section id="socials" class="max-w-5xl mx-auto px-6 py-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <a href="https://x.com/NomaxEsports" target="_blank" class="bento-item p-6 rounded-2xl flex flex-col items-center justify-center gap-2 group">
+                <i class="fa-brands fa-x-twitter text-xl group-hover:text-blue-400 transition"></i>
+                <span class="text-[9px] font-bold uppercase tracking-widest opacity-60">Twitter</span>
+            </a>
+            <a href="https://www.twitch.tv/nomaxesports" target="_blank" class="bento-item p-6 rounded-2xl flex flex-col items-center justify-center gap-2 group">
+                <i class="fa-brands fa-twitch text-xl group-hover:text-purple-500 transition"></i>
+                <span class="text-[9px] font-bold uppercase tracking-widest opacity-60">Twitch</span>
+            </a>
+            <a href="https://www.youtube.com/@NomaxEsports" target="_blank" class="bento-item p-6 rounded-2xl flex flex-col items-center justify-center gap-2 group">
+                <i class="fa-brands fa-youtube text-xl group-hover:text-red-600 transition"></i>
+                <span class="text-[9px] font-bold uppercase tracking-widest opacity-60">YouTube</span>
+            </a>
+            <a href="https://www.tiktok.com/@nomaxesports" target="_blank" class="bento-item p-6 rounded-2xl flex flex-col items-center justify-center gap-2 group">
+                <i class="fa-brands fa-tiktok text-xl group-hover:text-cyan-400 transition"></i>
+                <span class="text-[9px] font-bold uppercase tracking-widest opacity-60">TikTok</span>
+            </a>
         </div>
     </section>
 
-    <!-- Socials & Bento Section -->
-    <section id="socials" class="max-w-7xl mx-auto px-6 py-20">
-        <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
-            
-            <!-- Big Feature: Twitch -->
-            <a href="https://www.twitch.tv/nomaxesports" target="_blank" class="bento-item md:col-span-2 md:row-span-2 relative group p-8 flex flex-col justify-end">
-                <i class="fa-brands fa-twitch text-6xl absolute top-8 right-8 text-purple-600 opacity-20 group-hover:opacity-100 transition"></i>
-                <h2 class="text-3xl font-bold mb-2">LIVE STREAM</h2>
-                <p class="text-gray-400">Watch our pro team compete live on the world stage.</p>
-            </a>
-
-            <!-- X / Twitter -->
-            <a href="https://x.com/NomaxEsports" target="_blank" class="bento-item p-8 flex flex-col justify-between group">
-                <i class="fa-brands fa-x-twitter text-3xl group-hover:text-blue-400 transition"></i>
-                <span class="font-bold tracking-widest text-sm uppercase">Twitter</span>
-            </a>
-
-            <!-- YouTube -->
-            <a href="https://www.youtube.com/@NomaxEsports" target="_blank" class="bento-item p-8 flex flex-col justify-between group text-right">
-                <i class="fa-brands fa-youtube text-3xl group-hover:text-red-500 transition ml-auto"></i>
-                <span class="font-bold tracking-widest text-sm uppercase">YouTube</span>
-            </a>
-
-            <!-- TikTok -->
-            <a href="https://www.tiktok.com/@nomaxesports" target="_blank" class="bento-item md:col-span-2 p-8 flex items-center justify-between group">
-                <div class="flex items-center gap-4">
-                    <i class="fa-brands fa-tiktok text-3xl group-hover:text-cyan-400 transition"></i>
-                    <span class="font-bold tracking-widest text-sm uppercase">TikTok</span>
-                </div>
-                <span class="text-gray-500 text-xs">@NomaxEsports</span>
-            </a>
-
-        </div>
-    </section>
-
-    <!-- Store Section -->
-    <section id="store" class="max-w-7xl mx-auto px-6 py-20">
-        <div class="flex flex-col items-center mb-16">
-            <span class="text-blue-500 font-bold mb-2">LIMITED DROP</span>
-            <h2 class="font-logo text-4xl font-bold italic">THE ARMORY</h2>
+    <!-- Simplified Store Section -->
+    <section id="store" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="mb-10">
+            <h2 class="font-logo text-2xl italic font-bold">MERCH DROP 01</h2>
+            <div class="h-1 w-12 bg-blue-600 mt-2"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Product Item -->
-            <div class="group h-full">
-                <div class="relative aspect-square rounded-3xl overflow-hidden bg-zinc-900 border border-white/5 mb-6">
-                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1000" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" alt="Jersey">
-                    <button class="absolute bottom-6 left-6 right-6 bg-white text-black font-bold py-3 rounded-xl translate-y-20 group-hover:translate-y-0 transition duration-300">ADD TO CART — $65</button>
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/5] bg-zinc-900 rounded-xl overflow-hidden mb-4 relative">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-500" alt="Item">
+                    <div class="absolute bottom-4 left-4">
+                        <span class="bg-black/80 backdrop-blur-md px-3 py-1 text-[10px] font-bold rounded border border-white/10 uppercase italic">Out Now</span>
+                    </div>
                 </div>
-                <h3 class="font-bold tracking-tighter text-xl">PRO JERSEY 2024</h3>
-                <p class="text-gray-500 text-sm italic">Nomax Signature Edition</p>
-            </div>
-
-            <!-- Product Item -->
-            <div class="group h-full">
-                <div class="relative aspect-square rounded-3xl overflow-hidden bg-zinc-900 border border-white/5 mb-6">
-                    <img src="https://images.unsplash.com/photo-1556190502-c179a57262fd?q=80&w=1000" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" alt="Hoodie">
-                    <button class="absolute bottom-6 left-6 right-6 bg-white text-black font-bold py-3 rounded-xl translate-y-20 group-hover:translate-y-0 transition duration-300">ADD TO CART — $80</button>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-sm tracking-tight tracking-widest uppercase">Elite Jersey</h3>
+                        <p class="text-gray-500 text-[10px]">2024 Season Edition</p>
+                    </div>
+                    <p class="text-blue-500 font-bold text-sm">$60</p>
                 </div>
-                <h3 class="font-bold tracking-tighter text-xl">ESSENTIAL HOODIE</h3>
-                <p class="text-gray-400 text-sm italic">Black on Black Stealth</p>
             </div>
-
-            <!-- Product Item -->
-            <div class="group h-full">
-                <div class="relative aspect-square rounded-3xl overflow-hidden bg-zinc-900 border border-white/5 mb-6">
-                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1000" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" alt="Hat">
-                    <button class="absolute bottom-6 left-6 right-6 bg-white text-black font-bold py-3 rounded-xl translate-y-20 group-hover:translate-y-0 transition duration-300">ADD TO CART — $35</button>
-                </div>
-                <h3 class="font-bold tracking-tighter text-xl">LOGO SNAPBACK</h3>
-                <p class="text-gray-400 text-sm italic">Structured 6-Panel</p>
-            </div>
+            <!-- Repeat for other items if needed -->
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-20 text-center border-t border-white/5">
-        <h2 class="outline-text text-6xl md:text-9xl font-logo font-bold mb-10">NOMAX</h2>
-        <div class="flex justify-center gap-8 mb-10 opacity-50">
-            <a href="#"><i class="fa-brands fa-twitch"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+    <footer class="py-12 px-6 border-t border-white/5 flex flex-col items-center">
+        <div class="font-logo text-sm opacity-20 mb-6 italic">NOMAX ESPORTS</div>
+        <div class="flex gap-6 text-[9px] font-bold uppercase tracking-widest text-gray-500">
+            <button onclick="togglePrivacy()" class="hover:text-white transition uppercase">Privacy Policy</button>
+            <a href="mailto:contact@nomax.team" class="hover:text-white transition uppercase">Inquiries</a>
         </div>
-        <p class="text-[10px] tracking-widest text-gray-600 uppercase">© 2024 Nomax Gaming. Developed for Excellence.</p>
+        <p class="text-[8px] text-gray-700 mt-8">© 2024 NOMAX. ALL RIGHTS RESERVED.</p>
     </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="fixed inset-0 z-[100] p-6 flex items-center justify-center overflow-y-auto">
+        <div class="max-w-2xl bg-zinc-900 border border-white/10 p-8 rounded-3xl relative">
+            <button onclick="togglePrivacy()" class="absolute top-6 right-6 text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            <h2 class="font-logo text-xl italic mb-6">Privacy Policy</h2>
+            <div class="text-[12px] text-gray-400 space-y-4 leading-relaxed">
+                <p><strong>1. Information Collection:</strong> NOMAX Esports does not directly collect personal data via this landing page. If you follow our social media links, those platforms (X, Twitch, etc.) may collect your data per their own policies.</p>
+                <p><strong>2. External Links:</strong> Our website contains links to external sites. We are not responsible for the privacy practices of these other websites.</p>
+                <p><strong>3. Store Purchases:</strong> Any future merchandise transactions will be handled via third-party secure providers. We do not store credit card details on our servers.</p>
+                <p><strong>4. Updates:</strong> This policy is effective as of May 2024 and was built to ensure transparency for the NOMAX community.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePrivacy() {
+            const modal = document.getElementById('privacy-modal');
+            modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('privacy-modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
